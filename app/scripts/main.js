@@ -1,6 +1,6 @@
  $(document).on('scroll', function() {
 
-'use strict';
+   'use strict';
 
    if ($(window).scrollTop() > 100) {
      $('.scroll-top-wrapper').addClass('show');
@@ -24,10 +24,10 @@
 
 
  $(document).ready(function() {
-'use strict';
+   'use strict';
    /**
-   * Load Home Page
-   **/
+    * Load Home Page
+    **/
 
    $('#main-content').load('ajax/home-page.html #home-page');
 
@@ -45,8 +45,8 @@
 
 
    /**
-   * Click Logo
-   */
+    * Click Logo
+    */
    $('.logo').on('click', function(e) {
      e.preventDefault();
      $('#main-content').load('ajax/home-page.html #home-page');
@@ -55,8 +55,8 @@
 
 
    /**
-   * Navigation Menu
-   **/
+    * Navigation Menu
+    **/
    $('.menu-o-evento').on('click', function() {
      $('#main-content').load('ajax/o-evento.html #o-evento');
    });
@@ -89,10 +89,10 @@
  });
 
  /**
- * After all the ajax content is loaded up
- **/
+  * After all the ajax content is loaded up
+  **/
  $(document).ajaxComplete(function() {
-'use strict';
+   'use strict';
    $('.btn-actividades').on('click', function(e) {
      e.preventDefault();
      $('#main-content').load('ajax/actividades.html #actividades');
@@ -117,8 +117,8 @@
    $('.swipebox').swipebox();
 
    /**
-   * Smooth Scroll
-   */
+    * Smooth Scroll
+    */
    //smoothScroll();
  });
 
@@ -140,8 +140,8 @@
  });
 
 
- (function ($) {
-'use strict';
+ (function($) {
+   'use strict';
    //check if the browser width is less than or equal to the large dimension of an iPad
    if ($(window).width() <= 1024) {
 
@@ -151,8 +151,8 @@
      //     dataType : 'script'
      // });
      /**
-     *   Scrolldown O Evento
-     **/
+      *   Scrolldown O Evento
+      **/
      $(document).ajaxComplete(function(event, xhr, settings) {
        if (settings.url === 'ajax/o-evento.html') {
          $('a[href="#o-evento"]').click();
@@ -160,8 +160,8 @@
      });
 
      /**
-     *   Scrolldown Noticias
-     **/
+      *   Scrolldown Noticias
+      **/
      $(document).ajaxComplete(function(event, xhr, settings) {
        if (settings.url === 'ajax/noticias.html') {
          $('a[href="#noticias"]').click();
@@ -169,8 +169,8 @@
      });
 
      /**
-     *   Scrolldown Galeria
-     **/
+      *   Scrolldown Galeria
+      **/
      $(document).ajaxComplete(function(event, xhr, settings) {
        if (settings.url === 'ajax/galeria.html') {
          $('a[href="#galeria"]').click();
@@ -178,8 +178,8 @@
      });
 
      /**
-     *   Scrolldown Familia
-     **/
+      *   Scrolldown Familia
+      **/
      $(document).ajaxComplete(function(event, xhr, settings) {
        if (settings.url === 'ajax/familia.html') {
          $('a[href="#familia"]').click();
@@ -187,8 +187,8 @@
      });
 
      /**
-     *   Scrolldown Contactos
-     **/
+      *   Scrolldown Contactos
+      **/
      $(document).ajaxComplete(function(event, xhr, settings) {
        if (settings.url === 'ajax/contactos.html') {
          $('a[href="#contactos"]').click();
