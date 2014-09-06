@@ -6,6 +6,6 @@
     "modernizr": "~2.8.2",
     "swipebox": "~1.2.9",
     "font-awesome": "~4.2.0",
-	"flexslider": "*"
+    "flexslider": "*"
   }
 }
