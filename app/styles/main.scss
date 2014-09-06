@@ -284,6 +284,23 @@ html {
   padding-top: 40px;
 
 }
+
+#familia {
+  .jumbotron {
+    .row {
+      .col-md-3 {
+        img {
+          @include default-transition;
+          &:hover {
+            @include default-transition;
+            opacity: 0.75;
+          }
+        }
+      }
+    }
+  }
+}
+
 /* Main marketing message and sign up button */
 
 .jumbotron {
