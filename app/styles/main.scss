@@ -1,8 +1,28 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-// bower:scss
+// bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-// endbower
+// endbower
+@import url(http://fonts.googleapis.com/css?family=Dosis);
 
+@mixin map-floor() {
+  line-height: 0;
+  max-width: 822px;
+  position: relative;
+  width: 100%;
+
+}
+@mixin overlay-images($opacity) {
+  opacity: $opacity;
+  @include default-transition;
+
+}
+@mixin default-transition($duration: 0.5s) {
+  -moz-transition: all $duration ease-in-out;
+  -ms-transition: all $duration ease-in-out;
+  -o-transition: all $duration ease-in-out;
+  -webkit-transition: all $duration ease-in-out;
+
+}
 .browsehappy {
   background: #ccc;
   color     : #000;
@@ -10,66 +30,27 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding   : 0.2em 0;
 
 }
-@import url(http://fonts.googleapis.com/css?family=Dosis);
-
-/*
-@font-face {
-    font-family:'Dosis-SemiBold';
-    src: url('../fonts/Dosis-SemiBold.otf');
-}
-@font-face {
-    font-family:'Dosis-Regular';
-    src: url('../fonts/Dosis-Regular.otf');
-}
-*/
-
-/*@font-face {
-  font-family: 'Dosis';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/Dosis.woff') format('woff');
-}*/
-
 .map-floor0-container {
-  /*max-width: 500px;*/
-  line-height: 0;
-  max-width: 822px;
-  position: relative;
-  width: 100%;
+  @include map-floor;
+
+  img {
+    max-width: 100%;
+  }
 
 }
 .map-floor1-container {
-  /*max-width: 500px;*/
-  line-height: 0;
-  max-width: 822px;
-  position: relative;
-  width: 100%;
+  @include map-floor;
 
-}
-.map-floor0-container img {
-  max-width: 100%;
-
-}
-.map-floor1-container img {
-  max-width: 100%;
+  img {
+    max-width: 100%;
+  }
 
 }
 img[class*='overlay-'] {
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  opacity: 0.65;
-  transition: all 0.5s ease-in-out;
-
-}
-img[class*='overlay-']:hover {
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  opacity: 1;
-  transition: all 0.5s ease-in-out;
+  &:hover {
+    @include overlay-images(1);
+  }
+  @include overlay-images(0.65);
 
 }
 .overlay-lusitano1 {
@@ -128,92 +109,6 @@ img[class*='overlay-']:hover {
   width: 24.81%;
 
 }
-/*.rectangle {
-  position: absolute;
-  background-color: rgba(174, 174, 174, 0.44);
-  height: 338px;
-  width: 166px;
-  bottom: 0;
-  left: 230px;
-}*/
-
-.img-test {
-  bottom: 3%;
-  height: 303px;
-  left: 13%;
-  position: absolute;
-  width: 236px;
-
-}
-/*
-@media (min-width: 768px) and (max-width: 979px) {
-  .img-test {
-    position: absolute;
-    bottom: 3%;
-    left: 3.6%;
-    width: 176px;
-    height: 223px;
-  }
-}*/
-
-@media only screen and (max-width: 1024px) {
-
-  .rectangle {
-    background-color: rgba(41, 128, 185, 1);
-    bottom: 3%;
-    color: #fff;
-    height: 43.2%;
-    left: 13.8% !important;
-    position: absolute;
-    width: 19% !important;
-
-  }
-  .rectangle2 {
-    left: 4% !important;
-    width: 10% !important;
-  }
-
-}
-.testtt {
-  /* bottom: -30%; */
-  /* padding: 50%; */
-  background: url("../images/map_floor_0_hover.png") no-repeat;
-  height: 100%;
-  left: 12.8%;
-  position: absolute;
-  top: 53.8%;
-  width: 100%;
-
-}
-.rectangle {
-  background-color: rgba(41, 128, 185, 1);
-  bottom: 3%;
-  color: #fff;
-  height: 43.2%;
-  left: 22%;
-  position: absolute;
-  width: 14%;
-}
-.rectangle2 {
-  background-color: rgba(41, 128, 185, 1);
-  bottom: 12%;
-  color: #fff;
-  height: 25%;
-  left: 13%;
-  position: absolute;
-  width: 9%;
-
-}
-.rectangle span {
-  bottom: 40%;
-  left: 30%;
-  position: absolute;
-
-}
-.rectangle:hover {
-  background-color: rgba(0, 108, 179, 1);
-
-}
 header {
   padding: 28px 0 0;
 }
@@ -222,10 +117,9 @@ a {
 
 }
 .scroll-top-wrapper {
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
+  &:hover {
+    background-color: #888;
+  }
   background-color: rgba(119, 119, 119, 0.70);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -240,14 +134,12 @@ a {
   padding-top: 2px;
   position: fixed;
   right: 30px;
-  text-align: center;
-  transition: all 0.5s ease-in-out;
   visibility: hidden;
   width: 50px;
   z-index: 99999999;
-}
-.scroll-top-wrapper:hover {
-  background-color: #888;
+  @include default-transition;
+  text-align: center;
+
 }
 .scroll-top-wrapper.show {
   cursor: pointer;
@@ -271,15 +163,15 @@ a {
 h2,
 h3 {
   font-weight: bold;
-}
-.logo:hover {
-  -webkit-transition: all 0.6s ease 0s;
-  opacity: 0.6;
-  transition: all 0.6s ease 0s;
+
 }
 .logo {
-  -webkit-transition: all 0.6s ease 0s;
-  transition: all 0.6s ease 0s;
+  &:hover {
+    opacity: 0.75;
+    @include default-transition;
+  }
+  @include default-transition;
+
 }
 .logo-tagline {
   color         : rgb(0, 180, 224);
@@ -347,18 +239,17 @@ h3 {
   width: 100%;
 }
 .btn {
-  -webkit-transition: all 0.6s ease 0s;
   font-weight: bold;
-  transition: all 0.6s ease 0s;
+  @include default-transition;
+
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active,
 .btn-primary.active,
 .open>.dropdown-toggle.btn-primary {
-  -webkit-transition: all 0.6s ease 0s;
   background-color: #494949;
   border-color: transparent;
   color: #fff;
-  transition: all 0.6s ease 0s;
+  @include default-transition;
 }
 .btn-rose {
   background-color: rgb(238, 56, 136);
@@ -413,7 +304,12 @@ html {
   margin-top: 30px;
 }
 .nav-justified > li > a {
+  color: #777;
+  /*border-left: 25px solid white;*/
   margin-bottom: 0;
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+  padding-top: 5px;
   /*background-color: #e5e5e5;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e5e5e5));
   background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
@@ -423,17 +319,11 @@ html {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#e5e5e5',GradientType=0 );
   background-repeat: repeat-x;
   border-bottom: 1px solid #d5d5d5;*/
-  transition: all 0.6s ease 0s;
-  text-transform: uppercase;
-  padding-top: 5px;
-  -webkit-transition: all 0.6s ease 0s;
-  /*border-left: 25px solid white;*/
-  font-weight: bold;
-  color: #777;
   text-align: center;
   font-size: 20px;
-  font-family: 'Dosis', sans-serif;
   padding-bottom: 15px;
+  font-weight: bold;
+  @include default-transition;
 }
 .nav-justified > .active > a, .nav-justified > .active > a:hover, .nav-justified > .active > a:focus {
   /*background-color: #ddd;
@@ -491,6 +381,7 @@ html {
 
 @media only screen and (min-width: 320px) {
 
+
 }
 /* Custom, iPhone Retina */
 
@@ -501,8 +392,4 @@ html {
   .social-net {
     margin-top: 0;
   }
-
 }
-/*.col-md-3 {
-  top-margin: 20px;
-}*/
