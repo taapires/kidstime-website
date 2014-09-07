@@ -1,5 +1,5 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-// bower:scss
+// bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 @import url(http://fonts.googleapis.com/css?family=Dosis);
@@ -16,11 +16,12 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   @include default-transition;
 
 }
-@mixin default-transition($duration: 0.5s) {
+@mixin default-transition($duration: 0.3s) {
   -moz-transition: all $duration ease-in-out;
   -ms-transition: all $duration ease-in-out;
   -o-transition: all $duration ease-in-out;
   -webkit-transition: all $duration ease-in-out;
+  transition: all $duration ease-in-out;
 
 }
 .browsehappy {
@@ -30,6 +31,18 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding   : 0.2em 0;
 
 }
+
+.social-net {
+  li {
+    a {
+      @include default-transition;
+      &:hover {
+        @include default-transition;
+      }
+    }
+  }
+}
+
 .map-floor0-container {
   @include map-floor;
 
