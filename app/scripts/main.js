@@ -81,9 +81,10 @@
      $('#main-content').load('ajax/contactos.html #contactos');
    });
 
-   $('.menu-social').on('click', function() {
+   /*$('.location-map').on('click', function(e) {
+     e.preventDefault();
      $('#main-content').load('ajax/mapas.html #mapas');
-   });
+   });*/
    /* -----------------*/
 
  });
@@ -100,6 +101,11 @@
 
    $('.btn-imprensa').on('click', function() {
      $('#main-content').load('ajax/imprensa.html #imprensa');
+   });
+   
+   $('.location-map').on('click', function(e) {
+     e.preventDefault();
+     $('#main-content').load('ajax/mapas.html #mapas');
    });
 
    // flexslider initialization for the slider
