@@ -106,7 +106,7 @@
    $('.location-map').on('click', function(e) {
      e.preventDefault();
      $('#main-content').load('ajax/mapas.html #mapas');
-     $(".fancybox").fancybox();
+     $('.fancybox').fancybox();
    });
 
    // flexslider initialization for the slider
