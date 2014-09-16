@@ -69,8 +69,8 @@
      $('#main-content').load('ajax/galeria.html #galeria');
    });
 
-   $('.menu-noticias').on('click', function() {
-     $('#main-content').load('ajax/noticias.html #noticias');
+   $('.menu-novidades').on('click', function() {
+     $('#main-content').load('ajax/novidades.html #novidades');
    });
 
    $('.menu-familia').on('click', function() {
@@ -167,11 +167,11 @@
      });
 
      /**
-      *   Scrolldown Noticias
+      *   Scrolldown Novidades
       **/
      $(document).ajaxComplete(function(event, xhr, settings) {
-       if (settings.url === 'ajax/noticias.html') {
-         $('a[href="#noticias"]').click();
+       if (settings.url === 'ajax/novidades.html') {
+         $('a[href="#novidades"]').click();
        }
      });
 

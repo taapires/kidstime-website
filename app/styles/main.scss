@@ -3,7 +3,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-@import url(http://fonts.googleapis.com/css?family=Dosis);
+@import url(https://fonts.googleapis.com/css?family=Dosis);
 
 $font-stack: 'Dosis', sans-serif;
 
@@ -244,7 +244,7 @@ h3 {
   position   : absolute;
   top        : -10px;
 }
-.menu-noticias {
+.menu-novidades {
   border-top: 4px solid rgb(50, 191, 247);
   position: relative;
 }
