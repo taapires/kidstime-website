@@ -25,6 +25,7 @@
 
  $(document).ready(function() {
    'use strict';
+   
    /**
     * Load Home Page
     **/
@@ -94,6 +95,7 @@
   **/
  $(document).ajaxComplete(function() {
    'use strict';
+   
    $('.btn-actividades').on('click', function(e) {
      e.preventDefault();
      $('#main-content').load('ajax/actividades.html #actividades');

@@ -6,6 +6,14 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import url(https://fonts.googleapis.com/css?family=Dosis);
 
 $font-stack: 'Dosis', sans-serif;
+$color-rose: rgb(238, 56, 136);
+$color-orange: rgb(255, 151, 55);
+$color-blue: rgb(50, 191, 247);
+$color-green: rgb(108, 233, 163);
+$color-purple: rgb(204, 165, 255);
+$color-yellow: rgb(252, 245, 75);
+$color-grey: rgb(168, 168, 168);
+
 
 @mixin map-floor() {
   line-height: 0;
@@ -220,10 +228,10 @@ h3 {
   vertical-align: bottom;
 }
 .menu-home-page {
-  border-top: 4px solid rgb(238, 56, 136);
+  border-top: 4px solid $color-rose;
 }
 .menu-o-evento {
-  border-top: 4px solid rgb(255, 151, 55);
+  border-top: 4px solid $color-orange;
   position: relative;
 }
 .social-net {
@@ -245,20 +253,20 @@ h3 {
   top        : -10px;
 }
 .menu-novidades {
-  border-top: 4px solid rgb(50, 191, 247);
+  border-top: 4px solid $color-blue;
   position: relative;
 }
 .menu-galeria {
-  border-top: 4px solid rgb(108, 233, 163);
+  border-top: 4px solid $color-green;
 }
 .menu-familia {
-  border-top: 4px solid rgb(204, 165, 255);
+  border-top: 4px solid $color-purple;
 }
 .menu-contactos {
-  border-top: 4px solid rgb(252, 245, 75);
+  border-top: 4px solid $color-yellow;
 }
 .menu-social {
-  border-top: 4px solid rgb(168, 168, 168);
+  border-top: 4px solid $color-grey;
 }
 .menu-item {
   margin-left: 30px;
@@ -291,19 +299,19 @@ h3 {
   @include default-transition;
 }
 .btn-rose {
-  background-color: rgb(238, 56, 136);
+  background-color: $color-rose;
   border-color: transparent;
 }
 .btn-orange {
-  background-color: rgb(255, 151, 55);
+  background-color: $color-orange;
   border-color: transparent;
 }
 .btn-blue {
-  background-color: rgb(50, 191, 247);
+  background-color: $color-blue;
   border-color: transparent;
 }
 .btn-green {
-  background-color: rgb(108, 233, 163);
+  background-color: $color-green;
   border-color: transparent;
 }
 body {
