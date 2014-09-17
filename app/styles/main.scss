@@ -96,6 +96,16 @@ iframe, object, embed{max-width: 100%;}
   }
 
 }
+
+.map-jardim-container {
+  @include map-floor;
+
+  img {
+    max-width: 100%;
+  }
+
+}
+
 img[class*='overlay-'] {
   &:hover {
     @include overlay-images(1);
