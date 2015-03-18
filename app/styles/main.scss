@@ -48,7 +48,7 @@ iframe, object, embed{max-width: 100%;}
 
 #home-page {
   .row {
-    .col-md-3 {
+    .col-md-4 {
       img {
         &:hover {
           background-color: rgb(182, 182, 182);
@@ -348,7 +348,7 @@ html {
 #familia {
   .jumbotron {
     .row {
-      .col-md-3 {
+      .col-md-4 {
         img {
           @include default-transition;
           &:hover {
