@@ -25,7 +25,7 @@
 
  $(document).ready(function() {
    'use strict';
-   
+
    /**
     * Load Home Page
     **/
@@ -58,8 +58,8 @@
    /**
     * Navigation Menu
     **/
-   $('.menu-o-evento').on('click', function() {
-     $('#main-content').load('ajax/o-evento.html #o-evento');
+   $('.menu-eventos').on('click', function() {
+     $('#main-content').load('ajax/eventos.html #eventos');
    });
 
    $('.menu-home-page').on('click', function() {
@@ -95,7 +95,7 @@
   **/
  $(document).ajaxComplete(function() {
    'use strict';
-   
+
    $('.btn-actividades').on('click', function(e) {
      e.preventDefault();
      $('#main-content').load('ajax/actividades.html #actividades');
@@ -104,7 +104,7 @@
    $('.btn-imprensa').on('click', function() {
      $('#main-content').load('ajax/imprensa.html #imprensa');
    });
-   
+
    $('.location-map').on('click', function(e) {
      e.preventDefault();
      $('#main-content').load('ajax/mapas.html #mapas');
@@ -163,8 +163,8 @@
       *   Scrolldown O Evento
       **/
      $(document).ajaxComplete(function(event, xhr, settings) {
-       if (settings.url === 'ajax/o-evento.html') {
-         $('a[href="#o-evento"]').click();
+       if (settings.url === 'ajax/eventos.html') {
+         $('a[href="#eventos"]').click();
        }
      });
 
