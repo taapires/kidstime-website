@@ -114,7 +114,17 @@
    // flexslider initialization for the slider
    $('#gal-lisboa').flexslider({
      animation: 'slide',
-     controlNav: false,
+     controlNav: true,
+     animationLoop: false,
+     slideshow: false,
+     itemWidth: 210,
+     itemMargin: 5,
+     touch: true
+   });
+
+   $('#gal-porto').flexslider({
+     animation: 'slide',
+     controlNav: true,
      animationLoop: false,
      slideshow: false,
      itemWidth: 210,
